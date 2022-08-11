@@ -26,6 +26,8 @@ const Navigation = (props: Props) => {
           [theme.breakpoints.up("sm")]: {
             width: "30%",
           },
+
+          backgroundColor: theme.palette.secondary.main,
         },
       })}
       anchor="left"

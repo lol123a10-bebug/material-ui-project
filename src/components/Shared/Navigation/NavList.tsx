@@ -10,7 +10,18 @@ const NavList = (props: Props) => {
   const { title, list } = props;
 
   return (
-    <List subheader={<ListSubheader sx={{ textTransform: "uppercase" }}>{title}</ListSubheader>}>
+    <List
+      subheader={
+        <ListSubheader
+          sx={(theme) => ({
+            textTransform: "uppercase",
+            backgroundColor: theme.palette.secondary.main,
+          })}
+        >
+          {title}
+        </ListSubheader>
+      }
+    >
       {list.map((item, index) => (
         <ListItemButton key={index}>
           <ListItemIcon>{item.icon}</ListItemIcon>

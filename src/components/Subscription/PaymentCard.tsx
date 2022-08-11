@@ -1,0 +1,39 @@
+import { Payment } from "@mui/icons-material";
+import { Card, Box, Typography, Button } from "@mui/material";
+
+const PaymentCard = () => (
+  <Card sx={{ padding: "2rem" }}>
+    <Typography>Payment method</Typography>
+    <Card
+      sx={(theme) => ({
+        backgroundColor: theme.palette.secondary.main,
+      })}
+    >
+      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1rem" }}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+          <Payment sx={{ fontSize: "3rem" }} />
+          <Box>
+            <Typography>Visa **** 6546</Typography>
+            <Typography
+              sx={(theme) => ({
+                color: theme.palette.primary.light,
+              })}
+            >
+              Expiry 03/25
+            </Typography>
+          </Box>
+        </Box>
+        <Button
+          sx={(theme) => ({
+            color: theme.palette.primary.contrastText,
+          })}
+          variant="outlined"
+        >
+          Edit
+        </Button>
+      </Box>
+    </Card>
+  </Card>
+);
+
+export default PaymentCard;

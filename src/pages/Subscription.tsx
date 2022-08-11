@@ -7,6 +7,7 @@ const Subscription = (props: Props) => {
   return (
     <Box>
       <Header title="Subscription" subtitle="Manage your billing information and invoices." />
+      <Box></Box>
     </Box>
   );
 };

@@ -18,12 +18,16 @@ const Navigation = (props: Props) => {
   return (
     <Drawer
       variant="persistent"
-      sx={{
+      sx={(theme) => ({
         ".MuiDrawer-paper": {
           padding: ".5rem .5rem",
-          width: "30%",
+          width: "100%",
+
+          [theme.breakpoints.up("sm")]: {
+            width: "30%",
+          },
         },
-      }}
+      })}
       anchor="left"
       open={isOpen}
     >

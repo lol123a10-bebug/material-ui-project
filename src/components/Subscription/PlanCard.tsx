@@ -37,20 +37,22 @@ const PlanCard = () => {
         </Box>
       </Box>
       <Divider />
-      <Button
-        sx={(theme) => ({
-          display: "flex",
-          gap: "1rem",
-          width: "100%",
-          justifyContent: "flex-start",
-          height: "100%",
-          marginTop: "1rem",
-          color: theme.palette.primary.contrastText,
-        })}
-      >
-        <span>Upgrade plans</span>
-        <ArrowForward />
-      </Button>
+      <Box>
+        <Button
+          sx={(theme) => ({
+            display: "flex",
+            gap: "1rem",
+            width: "100%",
+            justifyContent: "flex-start",
+            height: "100%",
+            marginTop: "1rem",
+            color: theme.palette.primary.contrastText,
+          })}
+        >
+          <span>Upgrade plans</span>
+          <ArrowForward />
+        </Button>
+      </Box>
     </Card>
   );
 };

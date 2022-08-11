@@ -20,7 +20,7 @@ const Header = (props: Props) => {
       </Typography>
       <Typography
         sx={(theme) => ({
-          color: theme.palette.secondary.light,
+          color: theme.palette.primary.light,
         })}
       >
         {subtitle}

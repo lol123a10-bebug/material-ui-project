@@ -33,16 +33,16 @@ const getDesignTokens = (mode: PaletteMode) => ({
     ...(mode === "light"
       ? {
           primary: {
-            main: "#0d47a1",
+            main: "#fff",
             light: "#5472d3",
             dark: "#002171",
             contrastText: "#fff",
           },
           secondary: {
-            main: "#1565c0",
-            light: "#5e92f3",
-            dark: "#003c8f",
-            contrastText: "#000",
+            main: "#8c9eff",
+            light: "#c0cfff",
+            dark: "#5870cb",
+            contrastText: "#000000",
           },
         }
       : {
@@ -53,12 +53,12 @@ const getDesignTokens = (mode: PaletteMode) => ({
             contrastText: "#ffffff",
           },
 
-          // secondary: {
-          //   main: "#212121",
-          //   light: "#484848",
-          //   dark: "#000000",
-          //   contrastText: "#ffffff",
-          // },
+          secondary: {
+            main: "#121212",
+            light: "#484848",
+            dark: "#000000",
+            contrastText: "#ffffff",
+          },
         }),
   },
 });

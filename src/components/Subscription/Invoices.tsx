@@ -22,7 +22,7 @@ const Invoices = () => {
             marginTop: "1rem",
 
             ".MuiTableCell-body, .MuiTableCell-head": {
-              fontSize: "1.25rem",
+              fontSize: "1.1rem",
             },
           }}
         >
@@ -53,7 +53,10 @@ const Invoices = () => {
                   <Button
                     variant="contained"
                     sx={(theme) => ({
-                      color: theme.palette.primary.contrastText,
+                      color: theme.palette.secondary.contrastText,
+                      "&:hover": {
+                        color: theme.palette.primary.contrastText,
+                      },
                     })}
                   >
                     Download

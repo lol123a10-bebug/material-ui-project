@@ -6,10 +6,18 @@ const PaymentCard = () => (
     <Typography pb="1rem">Payment method</Typography>
     <Card
       sx={(theme) => ({
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: theme.palette.primary.main,
       })}
     >
-      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1rem" }}>
+      <Box
+        sx={(theme) => ({
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "1rem",
+          color: theme.palette.primary.contrastText,
+        })}
+      >
         <Box sx={{ display: "flex", alignItems: "center", gap: "1rem" }}>
           <Payment sx={{ fontSize: "3rem" }} />
           <Box>

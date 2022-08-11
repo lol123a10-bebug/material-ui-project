@@ -27,15 +27,28 @@ const Navigation = (props: Props) => {
             width: "30%",
           },
 
-          backgroundColor: theme.palette.secondary.main,
+          backgroundColor: theme.palette.primary.main,
         },
       })}
       anchor="left"
       open={isOpen}
     >
-      <Box sx={{ display: "flex", alignItems: "center", gap: ".75rem", padding: "1rem 0 1rem" }}>
+      <Box
+        sx={(theme) => ({
+          display: "flex",
+          alignItems: "center",
+          gap: ".75rem",
+          padding: "1rem 0 1rem",
+          color: theme.palette.primary.contrastText,
+        })}
+      >
         <Typography>
-          <IconButton onClick={handleClose}>
+          <IconButton
+            sx={(theme) => ({
+              color: theme.palette.primary.contrastText,
+            })}
+            onClick={handleClose}
+          >
             <ArrowBack />
           </IconButton>
         </Typography>

@@ -12,7 +12,7 @@ const Header = (props: Props) => {
     <div>
       <Typography
         sx={(theme) => ({
-          color: theme.palette.secondary.contrastText,
+          color: theme.palette.primary.contrastText,
         })}
         variant="h5"
       >

@@ -15,7 +15,8 @@ const NavList = (props: Props) => {
         <ListSubheader
           sx={(theme) => ({
             textTransform: "uppercase",
-            backgroundColor: theme.palette.secondary.main,
+            backgroundColor: theme.palette.primary.main,
+            color: theme.palette.primary.contrastText,
           })}
         >
           {title}
@@ -23,8 +24,13 @@ const NavList = (props: Props) => {
       }
     >
       {list.map((item, index) => (
-        <ListItemButton key={index}>
-          <ListItemIcon>{item.icon}</ListItemIcon>
+        <ListItemButton
+          sx={(theme) => ({
+            color: theme.palette.primary.contrastText,
+          })}
+          key={index}
+        >
+          <ListItemIcon sx={{ color: "inherit" }}>{item.icon}</ListItemIcon>
           <ListItemText>{item.text}</ListItemText>
         </ListItemButton>
       ))}

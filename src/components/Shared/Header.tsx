@@ -10,7 +10,8 @@ const Header = (props: Props) => {
 
   return (
     <div>
-      <Typography variant="h3"></Typography>
+      <Typography variant="h5">{title}</Typography>
+      <Typography>{subtitle}</Typography>
     </div>
   );
 };

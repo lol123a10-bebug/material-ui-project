@@ -1,8 +1,7 @@
-import { Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, ListSubheader } from "@mui/material";
+import { ArrowBack } from "@mui/icons-material";
+import { Box, Drawer, IconButton, Typography } from "@mui/material";
 import { account, organization, user } from "../../../utils/constants/navigation";
 import NavList from "./NavList";
-
-const drawerWidth = "min(30%, 30rem)";
 
 interface Props {
   isOpen: boolean;
@@ -17,28 +16,31 @@ const Navigation = (props: Props) => {
   };
 
   return (
-    <nav>
-      <Drawer
-        variant="persistent"
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          "& .MuiDrawer-paper": {
-            width: drawerWidth,
-          },
-        }}
-        anchor="left"
-        open={isOpen}
-        onClose={handleClose}
-      >
-        <div></div>
-        <div>
-          <NavList list={organization} title="Organization" />
-          <NavList list={account} title="Account Settings" />
-          <NavList list={user} title="User Settings" />
-        </div>
-      </Drawer>
-    </nav>
+    <Drawer
+      variant="persistent"
+      sx={{
+        ".MuiDrawer-paper": {
+          padding: ".5rem .5rem",
+          width: "30%",
+        },
+      }}
+      anchor="left"
+      open={isOpen}
+    >
+      <Box sx={{ display: "flex", alignItems: "center", gap: ".75rem", padding: "1rem 0 1rem" }}>
+        <Typography>
+          <IconButton onClick={handleClose}>
+            <ArrowBack />
+          </IconButton>
+        </Typography>
+        <Typography sx={{ fontSize: "1.3rem" }}>Settings</Typography>
+      </Box>
+      <div>
+        <NavList list={organization} title="Organization" />
+        <NavList list={account} title="Account Settings" />
+        <NavList list={user} title="User Settings" />
+      </div>
+    </Drawer>
   );
 };
 

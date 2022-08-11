@@ -11,7 +11,13 @@ const Header = (props: Props) => {
   return (
     <div>
       <Typography variant="h5">{title}</Typography>
-      <Typography>{subtitle}</Typography>
+      <Typography
+        sx={(theme) => ({
+          color: theme.palette.secondary.light,
+        })}
+      >
+        {subtitle}
+      </Typography>
     </div>
   );
 };

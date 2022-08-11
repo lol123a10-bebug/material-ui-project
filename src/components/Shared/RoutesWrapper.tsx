@@ -11,10 +11,14 @@ interface Props {
 const RoutesWrapper = (props: Props) => {
   const { children } = props;
 
-  const { isNavOpen, onNavToggle } = useUiContext();
+  const { isNavOpen, onNavToggle, onModeToggle } = useUiContext();
 
   const handleNavToggle = () => {
     onNavToggle();
+  };
+
+  const handleModeToggle = () => {
+    onModeToggle();
   };
 
   return (
@@ -26,7 +30,7 @@ const RoutesWrapper = (props: Props) => {
           right: ".5rem",
         }}
       >
-        <IconButton onClick={handleNavToggle}>{true ? <LightModeSharp /> : <DarkMode />}</IconButton>
+        <IconButton onClick={handleModeToggle}>{true ? <LightModeSharp /> : <DarkMode />}</IconButton>
 
         <IconButton onClick={handleNavToggle}>
           <Menu />

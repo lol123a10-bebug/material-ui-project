@@ -3,7 +3,7 @@ import { Card, Box, Typography, Button } from "@mui/material";
 
 const PaymentCard = () => (
   <Card sx={{ padding: "2rem" }}>
-    <Typography>Payment method</Typography>
+    <Typography pb="1rem">Payment method</Typography>
     <Card
       sx={(theme) => ({
         backgroundColor: theme.palette.secondary.main,

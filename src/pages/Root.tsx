@@ -5,7 +5,7 @@ import { UiContextProvider } from "../store/context/uiContext";
 import Subscription from "./Subscription";
 
 const Root = () => {
-  const [mode, setMode] = useState<PaletteMode>("light");
+  const [mode, setMode] = useState<PaletteMode>("dark");
 
   const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 

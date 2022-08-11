@@ -1,4 +1,5 @@
 import { Typography } from "@mui/material";
+import useUiContext from "../../utils/hooks/useUiContext";
 
 interface Props {
   title: string;
@@ -7,12 +8,13 @@ interface Props {
 
 const Header = (props: Props) => {
   const { title, subtitle } = props;
+  const { mode } = useUiContext();
 
   return (
     <div>
       <Typography
         sx={(theme) => ({
-          color: theme.palette.primary.contrastText,
+          color: mode === "light" ? theme.palette.secondary.contrastText : theme.palette.primary.contrastText,
         })}
         variant="h5"
       >

@@ -1,7 +1,9 @@
 import { ArrowForward } from "@mui/icons-material";
 import { Card, Box, Typography, Chip, Divider, Button } from "@mui/material";
+import useUiContext from "../../utils/hooks/useUiContext";
 
 const PlanCard = () => {
+  const { mode } = useUiContext();
   return (
     <Card sx={{ padding: "2rem 2rem 1.5rem" }}>
       <Box display="flex" justifyContent="space-between" alignItems="center" pb="1rem">
@@ -46,7 +48,7 @@ const PlanCard = () => {
             justifyContent: "flex-start",
             height: "100%",
             marginTop: "1rem",
-            color: theme.palette.primary.contrastText,
+            color: mode === "light" ? theme.palette.secondary.contrastText : theme.palette.primary.contrastText,
           })}
         >
           <span>Upgrade plans</span>

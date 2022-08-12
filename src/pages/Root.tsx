@@ -30,7 +30,26 @@ export default Root;
 const getDesignTokens = (mode: PaletteMode) => ({
   colors: {
     ...(mode === "light"
-      ? {}
+      ? {
+          first: "#fff",
+          second: "#ffffff",
+          third: "#ffffff",
+          textFirst: "#000",
+          textSecond: "#878FA8",
+          textThird: "#515B78",
+
+          button: "transparent",
+          border: "#c9c9c9",
+
+          firstBackground: "#282C34",
+
+          featured: {
+            plan: "#50B9DA",
+            planLight: "transparent",
+            upgrade: "#BE6019",
+            arrow: "#323849",
+          },
+        }
       : {
           first: "#212530",
           second: "#2a2f3c",
@@ -46,6 +65,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
 
           featured: {
             plan: "#50B9DA",
+            planLight: "#1F2D38",
             upgrade: "#BE6019",
             arrow: "#323849",
           },
@@ -56,33 +76,10 @@ const getDesignTokens = (mode: PaletteMode) => ({
     ...(mode === "light"
       ? {
           primary: {
-            main: "#fff",
-            light: "#5472d3",
-            dark: "#002171",
-            contrastText: "#fff",
-          },
-          secondary: {
-            main: "#8c9eff",
-            light: "#c0cfff",
-            dark: "#5870cb",
-            contrastText: "#000000",
+            main: "#50B9DA",
           },
         }
       : {
-          primary: {
-            main: "#212121",
-            light: "#6d6d6d",
-            dark: "#1b1b1b",
-            contrastText: "#ffffff",
-          },
-
-          secondary: {
-            main: "#121212",
-            light: "#484848",
-            dark: "#000000",
-            contrastText: "#ffffff",
-          },
-
           background: {
             default: "#101218",
             paper: "#101218",

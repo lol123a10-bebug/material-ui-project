@@ -18,14 +18,14 @@ const PlanCard = () => {
                 borderRadius: "0rem",
                 color: theme.colors.featured.plan,
                 borderColor: theme.colors.featured.plan,
-                backgroundColor: "#1F2D38",
+                backgroundColor: theme.colors.featured.planLight,
               })}
               label="Current plan"
             />
           </Box>
           <Typography
             sx={(theme) => ({
-              color: theme.palette.primary.light,
+              color: theme.colors.textSecond,
             })}
           >
             You're currently on the Pro plan.
@@ -36,7 +36,7 @@ const PlanCard = () => {
             <strong>$25</strong>
             <Typography
               sx={(theme) => ({
-                color: theme.palette.primary.light,
+                color: theme.colors.textSecond,
               })}
               display="inline"
             >

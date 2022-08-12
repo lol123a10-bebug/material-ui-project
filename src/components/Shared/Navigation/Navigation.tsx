@@ -24,7 +24,7 @@ const Navigation = (props: Props) => {
           width: "100%",
 
           [theme.breakpoints.up("sm")]: {
-            width: "30%",
+            maxWidth: "17.5rem",
           },
 
           backgroundColor: theme.colors.first,

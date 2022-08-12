@@ -21,7 +21,7 @@ const PaymentCard = () => {
             alignItems: "center",
             justifyContent: "space-between",
             padding: "1rem",
-            color: theme.palette.secondary.contrastText,
+            color: theme.colors.textFirst,
             backgroundColor: theme.colors.first,
           })}
         >

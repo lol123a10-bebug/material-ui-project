@@ -60,8 +60,8 @@ const Main = styled("main")<{ open?: boolean }>(({ theme, open }) => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
 
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: "30%",
+    [theme.breakpoints.up("md")]: {
+      marginLeft: "17.5rem",
     },
   }),
 }));

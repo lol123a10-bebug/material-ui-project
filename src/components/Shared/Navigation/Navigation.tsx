@@ -1,5 +1,5 @@
 import { ArrowBack } from "@mui/icons-material";
-import { Box, Drawer, IconButton, Typography } from "@mui/material";
+import { Box, ButtonBase, Drawer, Typography } from "@mui/material";
 import { account, organization, user } from "../../../utils/constants/navigation";
 import NavList from "./NavList";
 
@@ -20,7 +20,7 @@ const Navigation = (props: Props) => {
       variant="persistent"
       sx={(theme) => ({
         ".MuiDrawer-paper": {
-          padding: ".5rem .5rem",
+          padding: ".5rem 1rem",
           width: "100%",
 
           [theme.breakpoints.up("sm")]: {
@@ -38,19 +38,22 @@ const Navigation = (props: Props) => {
           display: "flex",
           alignItems: "center",
           gap: ".75rem",
-          padding: "1rem 0 1rem",
+          padding: "1rem 1rem 1rem",
           color: theme.colors.textFirst,
         })}
       >
         <Typography>
-          <IconButton
+          <ButtonBase
             sx={(theme) => ({
               color: theme.colors.textFirst,
+              backgroundColor: theme.colors.second,
+              padding: ".25rem",
+              borderRadius: "5px",
             })}
             onClick={handleClose}
           >
             <ArrowBack />
-          </IconButton>
+          </ButtonBase>
         </Typography>
         <Typography sx={{ fontSize: "1.3rem" }}>Settings</Typography>
       </Box>

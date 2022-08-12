@@ -28,6 +28,20 @@ const Root = () => {
 export default Root;
 
 const getDesignTokens = (mode: PaletteMode) => ({
+  colors: {
+    first: "#212530",
+    second: "#191C24",
+    third: "#101218",
+    textFirst: "#fff",
+    textSecond: "#515B78",
+
+    button: "#2A2F3C",
+
+    featured: {
+      plan: "#50B9DA",
+      upgrade: "#BE6019",
+    },
+  },
   palette: {
     mode,
     ...(mode === "light"

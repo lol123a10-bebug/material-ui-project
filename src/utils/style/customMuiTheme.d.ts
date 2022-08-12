@@ -12,6 +12,7 @@ declare module "@mui/material/styles" {
       featured: {
         plan: string;
         upgrade: string;
+        arrow: string;
       };
     };
   }
@@ -29,6 +30,7 @@ declare module "@mui/material/styles" {
       featured: {
         plan: string;
         upgrade: string;
+        arrow: string;
       };
     };
   }

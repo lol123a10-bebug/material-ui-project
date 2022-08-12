@@ -40,6 +40,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
     featured: {
       plan: "#50B9DA",
       upgrade: "#BE6019",
+      arrow: "#323849",
     },
   },
   palette: {

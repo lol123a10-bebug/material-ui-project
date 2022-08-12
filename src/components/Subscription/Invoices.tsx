@@ -31,7 +31,7 @@ const Invoices = () => {
               <TableCell
                 key={index}
                 sx={(theme) => ({
-                  color: theme.palette.primary.light,
+                  color: theme.colors.textSecond,
                   textTransform: "uppercase",
                   width: index === 0 ? "33%" : undefined,
                   whiteSpace: "nowrap",
@@ -43,7 +43,14 @@ const Invoices = () => {
           </TableHead>
           <TableBody>
             {pastInvoices.map((invoice) => (
-              <TableRow key={invoice.id}>
+              <TableRow
+                key={invoice.id}
+                sx={(theme) => ({
+                  "& td": {
+                    color: theme.colors.textFirst,
+                  },
+                })}
+              >
                 <TableCell>{invoice.name}</TableCell>
                 <TableCell>{invoice.date}</TableCell>
                 <TableCell>{invoice.status}</TableCell>
@@ -53,10 +60,8 @@ const Invoices = () => {
                   <Button
                     variant="contained"
                     sx={(theme) => ({
-                      color: theme.palette.secondary.contrastText,
-                      "&:hover": {
-                        color: theme.palette.primary.contrastText,
-                      },
+                      backgroundColor: theme.colors.button,
+                      color: theme.colors.textFirst,
                     })}
                   >
                     Download

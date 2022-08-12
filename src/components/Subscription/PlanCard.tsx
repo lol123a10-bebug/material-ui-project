@@ -5,14 +5,21 @@ import useUiContext from "../../utils/hooks/useUiContext";
 const PlanCard = () => {
   const { mode } = useUiContext();
   return (
-    <Card sx={{ padding: "2rem 2rem 1.5rem" }}>
+    <Card sx={(theme) => ({ padding: "2rem 2rem 1.5rem" })}>
       <Box display="flex" justifyContent="space-between" alignItems="center" pb="1rem">
         <Box>
           <Box sx={{ display: "flex", gap: ".75rem", alignItems: "center", paddingBottom: ".25rem" }}>
             <Typography sx={{ fontSize: "1.2rem" }}>Pro</Typography>
             <Chip
               variant="outlined"
-              sx={{ display: "inline", height: "unset", borderRadius: "0rem" }}
+              sx={(theme) => ({
+                display: "inline",
+                height: "unset",
+                borderRadius: "0rem",
+                color: theme.colors.featured.plan,
+                borderColor: theme.colors.featured.plan,
+                backgroundColor: "#1F2D38",
+              })}
               label="Current plan"
             />
           </Box>
@@ -26,7 +33,7 @@ const PlanCard = () => {
         </Box>
         <Box>
           <Typography variant="h5">
-            $25
+            <strong>$25</strong>
             <Typography
               sx={(theme) => ({
                 color: theme.palette.primary.light,
@@ -48,7 +55,7 @@ const PlanCard = () => {
             justifyContent: "flex-start",
             height: "100%",
             marginTop: "1rem",
-            color: mode === "light" ? theme.palette.secondary.contrastText : theme.palette.primary.contrastText,
+            color: theme.colors.featured.upgrade,
           })}
         >
           <span>Upgrade plans</span>

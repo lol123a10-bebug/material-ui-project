@@ -13,14 +13,14 @@ const LogText = (props: Props) => {
   return (
     <Typography
       sx={(theme) => ({
-        color: theme.palette.primary.light,
+        color: theme.colors.textSecond,
       })}
     >
       {label}:{" "}
       <Typography
         component="span"
         sx={(theme) => ({
-          color: mode === "light" ? theme.palette.secondary.contrastText : theme.palette.primary.contrastText,
+          color: theme.colors.textFirst,
         })}
       >
         {info}

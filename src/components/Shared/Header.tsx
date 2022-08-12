@@ -14,7 +14,7 @@ const Header = (props: Props) => {
     <div>
       <Typography
         sx={(theme) => ({
-          color: mode === "light" ? theme.palette.secondary.contrastText : theme.palette.primary.contrastText,
+          color: theme.colors.textFirst,
         })}
         variant="h5"
       >
@@ -22,7 +22,7 @@ const Header = (props: Props) => {
       </Typography>
       <Typography
         sx={(theme) => ({
-          color: theme.palette.primary.light,
+          color: theme.colors.textSecond,
         })}
       >
         {subtitle}

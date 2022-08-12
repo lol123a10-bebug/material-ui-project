@@ -29,19 +29,27 @@ export default Root;
 
 const getDesignTokens = (mode: PaletteMode) => ({
   colors: {
-    first: "#212530",
-    second: "#191C24",
-    third: "#101218",
-    textFirst: "#fff",
-    textSecond: "#515B78",
+    ...(mode === "light"
+      ? {}
+      : {
+          first: "#212530",
+          second: "#2a2f3c",
+          third: "#191c24",
+          textFirst: "#fff",
+          textSecond: "#878FA8",
+          textThird: "#515B78",
 
-    button: "#2A2F3C",
+          button: "#2A2F3C",
+          border: "#2B303F",
 
-    featured: {
-      plan: "#50B9DA",
-      upgrade: "#BE6019",
-      arrow: "#323849",
-    },
+          firstBackground: "#282C34",
+
+          featured: {
+            plan: "#50B9DA",
+            upgrade: "#BE6019",
+            arrow: "#323849",
+          },
+        }),
   },
   palette: {
     mode,
@@ -73,6 +81,11 @@ const getDesignTokens = (mode: PaletteMode) => ({
             light: "#484848",
             dark: "#000000",
             contrastText: "#ffffff",
+          },
+
+          background: {
+            default: "#101218",
+            paper: "#101218",
           },
         }),
   },

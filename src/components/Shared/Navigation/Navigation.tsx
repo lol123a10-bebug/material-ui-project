@@ -27,7 +27,7 @@ const Navigation = (props: Props) => {
             width: "30%",
           },
 
-          backgroundColor: theme.palette.primary.main,
+          backgroundColor: theme.colors.first,
         },
       })}
       anchor="left"
@@ -39,13 +39,13 @@ const Navigation = (props: Props) => {
           alignItems: "center",
           gap: ".75rem",
           padding: "1rem 0 1rem",
-          color: theme.palette.primary.contrastText,
+          color: theme.colors.textFirst,
         })}
       >
         <Typography>
           <IconButton
             sx={(theme) => ({
-              color: theme.palette.primary.contrastText,
+              color: theme.colors.textFirst,
             })}
             onClick={handleClose}
           >

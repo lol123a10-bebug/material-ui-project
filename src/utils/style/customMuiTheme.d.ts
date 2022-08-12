@@ -1,3 +1,5 @@
+import { Theme, ThemeOptions } from "@mui/material";
+
 declare module "@mui/material/styles" {
   interface Theme {
     colors: {
@@ -6,8 +8,11 @@ declare module "@mui/material/styles" {
       third: string;
       textFirst: string;
       textSecond: string;
+      textThird: string;
+      firstBackground: string;
 
       button: string;
+      border: string;
 
       featured: {
         plan: string;
@@ -18,14 +23,17 @@ declare module "@mui/material/styles" {
   }
 
   interface ThemeOptions {
-    colors: {
+    colors?: {
       first: string;
       second: string;
       third: string;
       textFirst: string;
       textSecond: string;
+      textThird: string;
+      firstBackground: string;
 
       button: string;
+      border: string;
 
       featured: {
         plan: string;
@@ -34,4 +42,6 @@ declare module "@mui/material/styles" {
       };
     };
   }
+
+  // export function createTheme(options?: ThemeOptions): Theme;
 }

@@ -15,6 +15,11 @@ const Blocks = () => {
         [theme.breakpoints.up("md")]: {
           gridTemplateColumns: "1fr 1fr",
         },
+
+        "& .MuiCard-root": {
+          backgroundColor: theme.colors.third,
+          border: `1px solid ${theme.colors.border}`,
+        },
       })}
     >
       <PlanCard />

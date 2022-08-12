@@ -15,10 +15,11 @@ const PlanCard = () => {
               sx={(theme) => ({
                 display: "inline",
                 height: "unset",
-                borderRadius: "0rem",
+                borderRadius: "5px",
                 color: theme.colors.featured.plan,
                 borderColor: theme.colors.featured.plan,
                 backgroundColor: theme.colors.featured.planLight,
+                padding: ".15rem 0",
               })}
               label="Current plan"
             />
